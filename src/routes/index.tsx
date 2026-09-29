@@ -54,7 +54,7 @@ function Decor() {
       >
         ✦
       </span>
-et    </div>
+    </div>
   );
 }
 
