@@ -63,13 +63,15 @@ function Decor() {
 function Section({
   children,
   className = "",
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }) {
   const ref = useReveal<HTMLElement>();
   return (
-    <section ref={ref} className={`reveal px-5 ${className}`}>
+    <section ref={ref} id={id} className={`reveal px-5 ${className}`}>
       <div className="mx-auto w-full max-w-md">{children}</div>
     </section>
   );
@@ -235,8 +237,8 @@ function RsvpSection() {
 /* ── Page ────────────────────────────────────────────────────────── */
 
 function Index() {
-  const detailsRef = useReveal<HTMLElement>();
   const heroRef = useReveal<HTMLElement>();
+  const detailsRef = useReveal<HTMLDivElement>();
 
   return (
     <main className="min-h-screen overflow-x-hidden">
